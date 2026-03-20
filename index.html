@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior IT Consultant | Business-Focused Technology Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&display=swap');
+
+        :root {
+            --transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            --bg: #0a0c10;
+            --surface: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.1);
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --whatsapp: #25d366;
+            --cursor-glow: rgba(56, 189, 248, 0.12);
+        }
+
+        [data-theme="light"] {
+            --bg: #f5f5f0; 
+            --surface: rgba(255, 255, 255, 0.9);
+            --border: rgba(0, 0, 0, 0.06);
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --accent: #0284c7;
+            --cursor-glow: rgba(2, 132, 199, 0.08);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { background-color: var(--bg); color: var(--text-main); transition: background-color var(--transition); overflow-x: hidden; }
+
+        #cursor-gradient {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none; z-index: -1;
+            background: radial-gradient(600px circle at var(--x) var(--y), var(--cursor-glow), transparent 80%);
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+
+        /* Navigation */
+        nav { padding: 30px 0; display: flex; justify-content: space-between; align-items: center; }
+        .theme-switch { 
+            background: var(--surface); border: 1px solid var(--border); 
+            width: 45px; height: 45px; border-radius: 12px; cursor: pointer; color: var(--accent);
+        }
+
+        /* Hero: Focused on Business Value */
+        .hero { padding: 100px 0 60px; text-align: center; }
+        .hero h1 { font-size: clamp(2.2rem, 6vw, 3.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
+        .hero p { font-size: 1.25rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 40px; }
+        
+        /* The "Why Me" Grid */
+        .benefit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: 50px; }
+        .benefit-card { 
+            background: var(--surface); padding: 40px; border-radius: 24px; border: 1px solid var(--border);
+            transition: var(--transition); text-align: left;
+        }
+        .benefit-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .benefit-card i { font-size: 2rem; color: var(--accent); margin-bottom: 20px; display: block; }
+        .benefit-card h3 { margin-bottom: 15px; font-size: 1.5rem; }
+        .benefit-card p { color: var(--text-muted); line-height: 1.6; }
+
+        /* Simplified Tech Bar */
+        .tech-footer { margin-top: 60px; text-align: center; opacity: 0.6; }
+        .tech-footer span { margin: 0 15px; font-size: 0.9rem; font-weight: 600; }
+
+        /* Conversion Section */
+        .cta-box { 
+            background: var(--surface); margin: 100px 0; padding: 60px; border-radius: 40px; 
+            border: 1px solid var(--border); text-align: center;
+        }
+        .whatsapp-btn {
+            background: var(--whatsapp); color: white; padding: 18px 40px; 
+            border-radius: 15px; text-decoration: none; display: inline-flex; align-items: center; 
+            gap: 12px; font-weight: 800; font-size: 1.2rem; transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+        }
+        .whatsapp-btn:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3); }
+
+        footer { padding: 40px 0; text-align: center; color: var(--text-muted); font-size: 0.85rem; }
+    </style>
+</head>
+<body data-theme="dark">
+
+    <div id="cursor-gradient"></div>
+
+    <div class="container">
+        <nav>
+            <div style="font-weight: 800; font-size: 1.2rem; letter-spacing: -1px;">AR<span> Tech Solutions</span></div>
+            <button class="theme-switch" onclick="toggleTheme()" id="theme-btn"><i class="fas fa-sun"></i></button>
+        </nav>
+
+        <header class="hero">
+            <h1>Turning Complex Ideas into <br> Profitable Digital Reality.</h1>
+            <p>I help business owners and startups build secure, fast, and scalable software. With 7+ years of experience, I take the technical stress off your shoulders so you can focus on growth.</p>
+            
+            <a href="https://wa.me/919653959422" class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> Discuss Your Project
+            </a>
+        </header>
+
+        <div class="benefit-grid">
+            <div class="benefit-card">
+                <i class="fas fa-rocket"></i>
+                <h3>Fast & Reliable Apps</h3>
+                <p>I build modern web applications that load instantly and never crash, ensuring your customers have a smooth experience every time.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Security & Privacy</h3>
+                <p>Your data is your most valuable asset. I implement bank-grade security to keep your business information safe from threats.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Built to Scale</h3>
+                <p>Whether you have 10 users or 10,000, your system will grow with you. I use cloud technology to ensure your platform stays fast as you expand.</p>
+            </div>
+        </div>
+
+        <section class="cta-box">
+            <h2 style="font-size: 2rem; margin-bottom: 20px;">Not sure where to start?</h2>
+            <p style="color: var(--text-muted); margin-bottom: 30px; max-width: 600px; margin: 0 auto 30px;">
+                Technology shouldn't be confusing. Let's have a simple conversation about your business goals and how I can help you reach them.
+            </p>
+            <a href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi, I have a project idea I'd like to discuss." class="whatsapp-btn">
+                <i class="fab fa-whatsapp"></i> Free Consultation
+            </a>
+        </section>
+
+        <div class="tech-footer">
+            <p style="margin-bottom: 20px;">Trusted Technical Stack:</p>
+            <span>AWS Cloud</span> • <span>Angular</span> • <span>Node.js</span> • <span>Secure Databases</span> • <span>Microservices</span>
+        </div>
+
+        <footer>
+            &copy; 2026 AR Tech Solutions.
+        </footer>
+    </div>
+
+    <script>
+        const cursorGradient = document.getElementById('cursor-gradient');
+        document.addEventListener('mousemove', (e) => {
+            cursorGradient.style.setProperty('--x', e.clientX + 'px');
+            cursorGradient.style.setProperty('--y', e.clientY + 'px');
+        });
+
+        function toggleTheme() {
+            const body = document.body;
+            const btn = document.getElementById('theme-btn');
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.setAttribute('data-theme', 'light');
+                btn.innerHTML = '<i class="fas fa-moon"></i>';
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                btn.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+        }
+    </script>
+</body>
+</html>
